@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Francois+One&display=swap');
+
+.francois-one-regular {
+  font-family: "Francois One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+:root {
+  --creme:#F0F5D3; 
+  --branco:#FFFFFF; 
+  --verde-escuro:#223B08; 
+  --verde-limon:#5AD84F; 
+  --cinza:#1b1b1b;
+  --font-titulo:"Francois One", sans-serif;
+  --font-corpo:"Times New Roman", sans-serif;
+
+}
+
+* {
+  font-family: var(--font-titulo);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--creme)
+}
+
+header {
+  display: flex;
+  background-color: var(--verde-escuro);
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0 20px 20px;
+  align-items: flex-end;
+}
+.logo_inicial {
+  width: 150px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+header nav ul li a {
+  color: var(--branco);
+  text-decoration: none;
+}
+
+h1 {
+  color: var(--verde-escuro);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+h2 {
+  color: var(--verde-escuro);
+  text-align:left;
+  font-size: 2rem;
+  margin-left: 50px;
+}
+
+main p {
+  color: var(--cinza);
+  text-align: justify;
+  font-size: 18px;
+  margin: 0 50px 20px 50px;
+  font-family:var(--font-corpo);
+}
+
+.lista_paragrafo {
+  color: var(--cinza);
+  text-align: justify;
+  font-size: 18px;
+  margin: 0 50px 0 50px;
+  font-family: var(--font-corpo);
+} 
+
+#fachada {
+  display: block;
+  margin: 0 auto;
+  border-radius: 19px;
+  width: 100%;
+}
+
+#legenda_fachada {
+  text-align: left;
+  font-size: 0.7rem;
+  color: var(--cinza);
+  margin-bottom: 20px;
+  font-family: var(--font-corpo);
+  font-style: italic;
+}
+
+
+#container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 20px 50px 20px 50px;
+  margin-bottom: 20px;
+}
+
+#container figure{
+  flex: 1;
+}
+.projetos_inicial {
+  width: 100%;
+  border-radius: 19px;
+}
+
+figure figcaption {
+  color: var(--cinza);
+  font-family: var(--font-corpo);
+  font-size: 12px;
+  font-style: italic;
+}
+
+.rodape{
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+  background-color: var(--verde-escuro);
+  margin-top: 100px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 20px;
+  width: 100%;
+}
+
+h3{
+  color: var(--verde-limon);
+  font-size: 22px;
+  position: relative;
+  text-align: left;
+}
+footer p{
+  text-align: left;
+  margin-right: 20px;
+}
+
+footer nav{
+  margin-top: 70px;
+  border-left: 3px solid var(--verde-limon);
+  padding-left: 10px;
+}
+footer nav a{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 100px;
+  padding: 10px;
+}
+
+.rodape ul {
+  text-align:start;
+  list-style: none;
+}
+
+.redes{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 100px;
+  padding: 10px 30px;
+  border-left: 3px solid var(--verde-limon);
+}
+
+.rodape ul li a{
+  color: var(--branco);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.legais{
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  background-color: var(--verde-escuro);
+  text-align: center;
+  color: var(--creme);
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+}
+
+.verde_claro{
+  padding: 0;
+  margin: 0 50px;
+  color: var(--verde-limon);
+  font-weight: bold;
+}
+
+.branco{
+  padding: 0;
+  margin: 0 50px;
+  color: var(--branco);
+  font-weight: bold;
+}
+address{
+  border-left: 3px solid var(--verde-limon);
+  padding-left: 10px;
+}
+address p{
+  font-family: var(--font-titulo);
+  color: var(--creme);
+  font-size: 18px;
+}
+
+address p strong{
+  color: var(--verde-limon);
+  font-family: var(--font-titulo);
+  font-style: normal;
+}
+
+@media (max-width: 903px) {
+
+  .rodape {
+    flex-direction: column;
+    align-items: flex-start;  
+  }
+
+  footer nav {
+    margin-top: 0;
+    border-left: none;
+  }
+
+  .redes {
+    margin-right: 0;
+  }
+
+}
+@media (max-width:750px){
+
+  #container{
+    flex-direction: column;
+  }
+
+}

@@ -433,7 +433,7 @@ address p strong{
 }
 
 /* Smartphones */
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   
   header {
     display: flex;

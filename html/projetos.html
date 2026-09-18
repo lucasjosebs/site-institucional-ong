@@ -10,10 +10,27 @@
 <body>
     <header>
         <img class="logo_inicial" src="../assets/logo.png" alt="Logo da COMUNIDAGRO" width="250">
+        <label class="burger" for="burger">
+            <input type="checkbox" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
         <nav id="nav_header">
             <ul>
                 <li><a href="../index.html">INÍCIO</a></li>
-                <li><a href="projetos.html">PROJETOS</a></li>
+                <li class="dropdown">
+                    <div class="dropdown-toggle">
+                        <a href="projetos.html">PROJETOS</a>
+                        <input type="checkbox" id="submenu-toggle" class="submenu-checkbox">
+                        <label class="arrow" for="submenu-toggle">▼</label>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="projetos.html#realizados">Realizados</a></li>
+                        <li><a href="projetos.html#andamento">Em Andamento</a></li>
+                        <li><a href="projetos.html#futuros">Futuros</a></li>
+                    </ul>
+                </li>
                 <li><a href="cadastro.html">CADASTRO</a></li>
             </ul>
         </nav>
@@ -21,7 +38,7 @@
     <main class="projetos">
         <h1>Nossos Projetos</h1>
         <section>
-            <h2>Projetos Realizados</h2>
+            <h2 id="realizados">Projetos Realizados</h2>
             <article>
                 <h3>Horta Comunitária Vila Esperança</h3>
                 <p>Nosso projeto mais emblemático. Construída em um terreno cedido pela prefeitura, ao lado da Escola Municipal Vila Esperança, a horta foi erguida com mãos de familiares de alunos e das próprias crianças da escola e da creche vizinha. Hoje, a horta produz hortaliças e temperos que são utilizados na merenda escolar, além de servir como sala de aula ao ar livre para atividades pedagógicas sobre meio ambiente e alimentação.</p>
@@ -36,7 +53,7 @@
             </article>
         </section>
         <section>
-            <h2>Projetos em Andamento</h2>
+            <h2 id="andamento">Projetos em Andamento</h2>
             <article>
                 <h3>Programa de Doação de Mudas Frutíferas</h3>
                 <p>Estamos desenvolvendo um programa de doação de mudas frutíferas para famílias cadastradas, com o objetivo de incentivar o cultivo doméstico e a alimentação saudável. As mudas serão distribuídas em eventos comunitários e acompanhadas por orientações sobre plantio e cuidados.</p>
@@ -47,7 +64,7 @@
             </article>
         </section>
         <section>
-            <h2>Projetos Futuros</h2>
+            <h2 id="futuros">Projetos Futuros</h2>
             <article>
                 <h3>Rede de Trocas Comunitárias</h3>
                 <p>Um projeto pensado para criar um sistema de troca de mudas, sementes e excedente de colheita entre famílias participantes da rede COMUNIDAGRO.</p>

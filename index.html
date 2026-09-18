@@ -10,10 +10,27 @@
 <body>
     <header>
         <img class="logo_inicial" src="assets/logo.png" alt="Logo da COMUNIDAGRO">
+        <label class="burger" for="burger">
+            <input type="checkbox" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
         <nav>
             <ul>
                 <li><a href="index.html">INÍCIO</a></li>
-                <li><a href="html/projetos.html">PROJETOS</a></li>
+                <li class="dropdown">
+                    <div class="dropdown-toggle">
+                        <a href="html/projetos.html">PROJETOS</a>
+                        <input type="checkbox" id="submenu-toggle" class="submenu-checkbox">
+                        <label class="arrow" for="submenu-toggle">▼</label>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="html/projetos.html#realizados">Realizados</a></li>
+                        <li><a href="html/projetos.html#andamento">Em Andamento</a></li>
+                        <li><a href="html/projetos.html#futuros">Futuros</a></li>
+                    </ul>
+                </li>
                 <li><a href="html/cadastro.html">CADASTRO</a></li>
             </ul>
         </nav>

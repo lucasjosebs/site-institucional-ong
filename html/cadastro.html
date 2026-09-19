@@ -38,6 +38,11 @@
     <main>
         <h1>Cadastro de Voluntários e Doadores</h1>
         <h2>Faça parte dessa grande história que estamos escrevendo em conjunto</h2>
+
+        <div class="alert alert-info">
+            <strong>Atenção:</strong> preencha todos os campos obrigatórios corretamente. Campos com erro serão destacados em vermelho.
+        </div>
+
         <form action="#" method="post">
 
             <fieldset>
@@ -163,6 +168,14 @@
 
             <button type="submit">Enviar</button>
         </form>
+        <input type="checkbox" id="toast-toggle" class="toast-toggle-checkbox">
+        <label for="toast-toggle" class="toast-demo-trigger">Simular envio (demonstração)</label>
+
+        <div class="toast toast-sucesso">
+            <span class="toast-icone">✓</span>
+            <span class="toast-mensagem">Cadastro enviado com sucesso!</span>
+            <label for="toast-toggle" class="toast-fechar">&times;</label>
+        </div>
     </main>
     <footer>
         <div class="rodape">

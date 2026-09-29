@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="COMUNIDAGRO" width="200">
+</p>
+
 # 🌱 COMUNIDAGRO — Site Institucional
 
 Site institucional fictício para uma ONG de agricultura urbana e sustentável, desenvolvido como atividade acadêmica da disciplina **Desenvolvimento Front-End para Web**, do curso de **Ciência da Computação**.

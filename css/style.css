@@ -615,17 +615,6 @@ form textarea:not(:placeholder-shown):invalid {
   display: none;
 }
 
-.toast-demo-trigger {
-  display: inline-block;
-  margin: var(--space-3) auto;
-  padding: var(--space-1) var(--space-3);
-  background-color: var(--color-secundary-title);
-  color: var(--color-text-header-footer);
-  border-radius: var(--space-1);
-  cursor: pointer;
-  font-size: var(--text-sm);
-}
-
 .toast {
   position: fixed;
   bottom: var(--space-4);

@@ -6,6 +6,8 @@
     <title>COMUNIDAGRO</title>
     <link rel="shortcut icon" href="../assets/icon-logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="module" src="../js/main.js"></script>
 </head>
 <body>
     <header>
@@ -39,13 +41,13 @@
         <h1>Cadastro de Voluntários e Doadores</h1>
         <h2>Faça parte dessa grande história que estamos escrevendo em conjunto</h2>
 
-        <div class="alert alert-info">
-            <strong>Atenção:</strong> preencha todos os campos obrigatórios corretamente. Campos com erro serão destacados em vermelho.
+        <div id="alerta-form" class="alert alert-erro" style="display: none;">
+            <strong>Atenção:</strong> Por favor, preencha todos os campos obrigatórios corretamente. Os campos com erro estão destacados a vermelho.
         </div>
 
-        <form action="#" method="post">
+        <form action="#" method="post" novalidate>
 
-            <fieldset>
+            <fieldset data-aos= "fade-up" data-aos-duration="1000">
                 <legend>Dados Pessoais</legend>
                 <p>
                     <label for="nome">Nome Completo:</label>
@@ -61,7 +63,7 @@
                 </p>
             </fieldset>
 
-            <fieldset>
+            <fieldset data-aos= "fade-up" data-aos-duration="1000">
                 <legend>Informações de Contato</legend>
                 <p>
                     <label for="email">Email:</label>
@@ -85,7 +87,7 @@
                 </p>
             </fieldset>
 
-            <fieldset>
+            <fieldset data-aos= "fade-up" data-aos-duration="1000">
                 <legend>Endereço</legend>
                 <p>
                     <label for="endereco">Endereço:</label>
@@ -150,7 +152,7 @@
                 </p>
             </fieldset>
 
-            <fieldset>
+            <fieldset data-aos= "fade-up" data-aos-duration="1000">
                 <legend>Tipo do Cadastro</legend>
                 <p>
                     <label for="tipo">Tipo de Cadastro:</label>
@@ -166,11 +168,9 @@
                 </p>
             </fieldset>
 
-            <button type="submit">Enviar</button>
+            <button data-aos= "fade-up" data-aos-duration="1000" type="submit">Enviar</button>
         </form>
         <input type="checkbox" id="toast-toggle" class="toast-toggle-checkbox">
-        <label for="toast-toggle" class="toast-demo-trigger">Simular envio (demonstração)</label>
-
         <div class="toast toast-sucesso">
             <span class="toast-icone">✓</span>
             <span class="toast-mensagem">Cadastro enviado com sucesso!</span>
@@ -218,5 +218,6 @@
             </small>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>

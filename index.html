@@ -48,7 +48,14 @@
                 Nosso trabalho nasceu de uma constatação simples: muitas escolas e creches municipais não possuem espaço verde, nem contato direto com a produção de alimentos, e muitas famílias moram em locais sem quintal, sem saber que é possível cultivar até em um apartamento pequeno.
             </p>
             <figure>
-                <img src="assets/fachada.png" alt="Fachada da COMUNIDAGRO" id="fachada">
+                <picture>
+                    <!-- Para telas pequenas (mobiles) -->
+                    <source media="(max-width: 640px)" srcset="assets/fachada-mobile.webp" type="image/webp">
+                    <!-- Para telas médias/grandes -->
+                    <source media="(min-width: 641px)" srcset="assets/fachada-desktop.webp" type="image/webp">
+                    <!-- Fallback caso o navegador não suporte picture/webp -->
+                    <img src="assets/fachada.png" alt="Fachada da COMUNIDAGRO" id="fachada" loading="lazy">
+                </picture>
                 <figcaption id="legenda_fachada">Fachada da COMUNIDAGRO (imagem gerada por IA)</figcaption>
             </figure>
         </section>

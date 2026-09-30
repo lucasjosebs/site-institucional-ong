@@ -12,20 +12,20 @@
 <body>
     <header>
         <img class="logo_inicial" src="../assets/logo.png" alt="Logo da COMUNIDAGRO" width="250">
-        <label class="burger" for="burger">
+        <label class="burger" for="burger" aria-label="Abrir menu de navegação">
             <input type="checkbox" id="burger">
             <span></span>
             <span></span>
             <span></span>
         </label>
-        <nav id="nav_header">
+        <nav id="nav_header" aria-label="Principal">
             <ul>
                 <li><a href="../index.html">INÍCIO</a></li>
                 <li class="dropdown">
                     <div class="dropdown-toggle">
                         <a href="projetos.html">PROJETOS</a>
-                        <input type="checkbox" id="submenu-toggle" class="submenu-checkbox">
-                        <label class="arrow" for="submenu-toggle">▼</label>
+                        <input type="checkbox" id="submenu-toggle" class="submenu-checkbox" aria-label="Abrir submenu Projetos">
+                        <label class="arrow" for="submenu-toggle" aria-hidden="true">▼</label>
                     </div>
                     <ul class="submenu">
                         <li><a href="projetos.html#realizados">Realizados</a></li>
@@ -41,7 +41,7 @@
         <h1>Cadastro de Voluntários e Doadores</h1>
         <h2>Faça parte dessa grande história que estamos escrevendo em conjunto</h2>
 
-        <div id="alerta-form" class="alert alert-erro" style="display: none;">
+        <div id="alerta-form" class="alert alert-erro" role="alert" style="display: none;">
             <strong>Atenção:</strong> Por favor, preencha todos os campos obrigatórios corretamente. Os campos com erro estão destacados a vermelho.
         </div>
 
@@ -171,10 +171,10 @@
             <button data-aos= "fade-up" data-aos-duration="1000" type="submit">Enviar</button>
         </form>
         <input type="checkbox" id="toast-toggle" class="toast-toggle-checkbox">
-        <div class="toast toast-sucesso">
+        <div class="toast toast-sucesso" role="status" aria-live="polite">
             <span class="toast-icone">✓</span>
             <span class="toast-mensagem">Cadastro enviado com sucesso!</span>
-            <label for="toast-toggle" class="toast-fechar">&times;</label>
+            <label for="toast-toggle" class="toast-fechar" aria-label="Fechar notificação">&times;</label>
         </div>
     </main>
     <footer>
@@ -183,7 +183,7 @@
                 <img src="../assets/logo.png" alt="COMUNIDAGRO" width="100">
                 <p> <span class="verde_claro">JUNTOS</span><br><span class="branco">PLANTAMOS HOJE,</span><br><span class="branco">TRANSFORMAMOS</span><br><span class="verde_claro">AMANHÃ</span></p>
             </section>
-            <nav>
+            <nav aria-label="Rodapé">
                 <ul>
                     <li><a href="../index.html">INÍCIO</a></li>
                     <li><a href="projetos.html">PROJETOS</a></li>

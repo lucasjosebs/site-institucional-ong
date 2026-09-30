@@ -112,22 +112,40 @@ O formulário de cadastro (`cadastro.html`) combina validação nativa do HTML5 
 - **HTML5** — marcação semântica (`header`, `nav`, `main`, `section`, `article`, `figure`, `address`, `footer`).
 - **CSS3** — Custom Properties, Grid, Flexbox, `:has()`, `@media`, `@starting-style`.
 - **JavaScript (ES Modules)** — `fetch`, `DOMParser`, History API, delegação de eventos, template literals, `localStorage`.
+- **Node.js & NPM** — gerenciamento de pacotes e execução de scripts locais.
+- **Vite** — *Bundler* ultrarrápido utilizado para ambiente de desenvolvimento local e compilação/minificação de produção (HTML, CSS e JS).
 - **AOS (Animate On Scroll)** — biblioteca externa para animações de entrada dos elementos.
 - **Google Fonts** — Francois One e Bebas Neue.
 
 ## 🚀 Como executar localmente
 
-O projeto não possui dependências, build nem testes automatizados.
+O projeto utiliza o **Vite** como servidor local e ferramenta de *build*. É necessário ter o [Node.js](https://nodejs.org/) instalado na sua máquina.
 
 1. Clone o repositório:
-   git clone https://github.com/lucasjosebs/site-institucional-ong.git
-2. Entre na pasta: cd site-institucional-ong
-3. Inicie um servidor local (necessário por causa de ES Modules e fetch):
-   - VS Code: extensão Live Server, botão "Go Live"; ou
-   - Terminal: python -m http.server 8000
-4. Acesse http://localhost:8000
+   ```bash
+   git clone [https://github.com/lucasjosebs/site-institucional-ong.git](https://github.com/lucasjosebs/site-institucional-ong.git)
 
-> Abrir o index.html direto (file://) não funciona: o navegador bloqueia módulos e fetch.
+2. Entre na pasta:
+   ```bash
+   cd site-institucional-ong
+
+3. Instale as dependências do projeto:
+   ```bash
+   npm install
+
+4. Inicie o servidor local de desenvolvimento:
+   ```bash
+   npm run dev
+
+> O terminal exibirá um link (geralmente http://localhost:5173). Basta clicar ou acessar diretamente no navegador.
+
+### 📦 Build de Produção
+
+Para gerar a versão otimizada e minificada para produção (HTML, CSS, JS e imagens compactados), execute:
+   ```bash
+   npm run build
+   ```
+Os ficheiros finais serão gerados na pasta dist/. Não altere os ficheiros dentro desta pasta manualmente. Para testar o ambiente de produção gerado localmente, utilize o comando npm run preview.
 
 ## 🔀 Versionamento
 
@@ -135,6 +153,7 @@ O projeto não possui dependências, build nem testes automatizados.
 - **Versionamento Semântico:** v1.0.0 (primeira versão estável), v1.0.1 (correção do formulário).
 - **Conventional Commits:** feat:, fix:, docs:, style:.
 - Alterações integradas via Pull Requests descritivos.
+- **Nota:** As pastas `node_modules/` e `dist/` são geradas localmente e ignoradas no versionamento (via `.gitignore`). O código de produção deve ser compilado na plataforma de hospedagem ou via CI/CD (ex: GitHub Actions)
 
 ## 👨‍💻 Autor
 

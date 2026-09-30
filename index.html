@@ -13,19 +13,19 @@
     <header>
         <img class="logo_inicial" src="assets/logo.png" alt="Logo da COMUNIDAGRO">
         <label class="burger" for="burger">
-            <input type="checkbox" id="burger">
+            <input type="checkbox" id="burger" aria-label="Abrir menu de navegação">
             <span></span>
             <span></span>
             <span></span>
         </label>
-        <nav>
+        <nav aria-label="Principal" >
             <ul>
                 <li><a href="index.html">INÍCIO</a></li>
                 <li class="dropdown">
                     <div class="dropdown-toggle">
                         <a href="html/projetos.html">PROJETOS</a>
-                        <input type="checkbox" id="submenu-toggle" class="submenu-checkbox">
-                        <label class="arrow" for="submenu-toggle">▼</label>
+                        <input type="checkbox" id="submenu-toggle" class="submenu-checkbox" aria-label="Abrir submenu Projetos">
+                        <label class="arrow" for="submenu-toggle" aria-hidden="true">▼</label>
                     </div>
                     <ul class="submenu">
                         <li><a href="html/projetos.html#realizados">Realizados</a></li>
@@ -101,7 +101,7 @@
                 <img src="assets/logo.png" alt="COMUNIDAGRO" width="100">
                 <p> <span class="verde_claro">JUNTOS</span><br><span class="branco">PLANTAMOS HOJE,</span><br><span class="branco">TRANSFORMAMOS</span><br><span class="verde_claro">AMANHÃ</span></p>
             </section>
-            <nav>
+            <nav aria-label="Rodapé">
                 <ul>
                     <li><a href="index.html">INÍCIO</a></li>
                     <li><a href="html/projetos.html">PROJETOS</a></li>

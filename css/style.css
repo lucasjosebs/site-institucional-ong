@@ -943,3 +943,48 @@ form textarea:not(:placeholder-shown):invalid {
     min-height: auto; 
   }
 }
+
+/* Foco visível: cor escura no conteúdo, clara no cabeçalho/rodapé */
+a:focus-visible, button:focus-visible, select:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+header a:focus-visible, footer a:focus-visible {
+  outline-color: var(--color-accent-border);
+}
+
+/* Formulário: mantém o estilo atual e reforça o contorno */
+form input:focus-visible, form select:focus-visible, form textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Hambúrguer: mostra onde está o foco */
+.burger:has(input:focus-visible) {
+  outline: 3px solid var(--color-accent-border);
+  outline-offset: 4px;
+}
+
+/* Submenu no desktop: abre também por foco de teclado */
+@media (min-width: 641px) {
+  .dropdown:focus-within .submenu { display: block; }
+}
+
+/* Submenu no mobile: checkbox focável, com foco visível na seta */
+@media (max-width: 640px) {
+  .dropdown-toggle { position: relative; }
+  header:has(.burger input:checked) .dropdown-toggle .submenu-checkbox {
+    display: block;
+    position: absolute;
+    right: var(--space-4);
+    width: 2.5rem;
+    height: 2.5rem;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .dropdown-toggle .submenu-checkbox:focus-visible ~ .arrow {
+    outline: 3px solid var(--color-accent-border);
+    border-radius: var(--space-1);
+  }
+}

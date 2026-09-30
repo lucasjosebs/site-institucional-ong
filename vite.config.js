@@ -3,6 +3,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { resolve } from 'path';
 
 export default defineConfig({
+  base: '/site-institucional-ong/', 
   plugins: [
     ViteImageOptimizer({
       png: { quality: 80 },

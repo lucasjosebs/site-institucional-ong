@@ -115,6 +115,27 @@ O formulário de cadastro (`cadastro.html`) combina validação nativa do HTML5 
 - **AOS (Animate On Scroll)** — biblioteca externa para animações de entrada dos elementos.
 - **Google Fonts** — Francois One e Bebas Neue.
 
+## 🚀 Como executar localmente
+
+O projeto não possui dependências, build nem testes automatizados.
+
+1. Clone o repositório:
+   git clone https://github.com/lucasjosebs/site-institucional-ong.git
+2. Entre na pasta: cd site-institucional-ong
+3. Inicie um servidor local (necessário por causa de ES Modules e fetch):
+   - VS Code: extensão Live Server, botão "Go Live"; ou
+   - Terminal: python -m http.server 8000
+4. Acesse http://localhost:8000
+
+> Abrir o index.html direto (file://) não funciona: o navegador bloqueia módulos e fetch.
+
+## 🔀 Versionamento
+
+- **GitFlow:** main (versões estáveis), develop (integração), feature/*, release/* e hotfix/*.
+- **Versionamento Semântico:** v1.0.0 (primeira versão estável), v1.0.1 (correção do formulário).
+- **Conventional Commits:** feat:, fix:, docs:, style:.
+- Alterações integradas via Pull Requests descritivos.
+
 ## 👨‍💻 Autor
 
 Desenvolvido por **Lucas** como atividade avaliativa da disciplina de Desenvolvimento Front-End para Web — curso de Ciência da Computação.

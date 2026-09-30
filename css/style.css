@@ -988,3 +988,44 @@ form input:focus-visible, form select:focus-visible, form textarea:focus-visible
     border-radius: var(--space-1);
   }
 }
+
+/* ===== Modo escuro (segue a preferência do sistema) ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-background: #111a0b;
+    --color-text-main: #e8efd8;
+    --color-secundary-title: #c4ecb0;
+  }
+
+  /* Contorno de foco claro em fundo escuro */
+  a:focus-visible, button:focus-visible, select:focus-visible,
+  form input:focus-visible, form select:focus-visible, form textarea:focus-visible {
+    outline-color: var(--color-accent-border);
+  }
+
+  /* Formulário */
+  form input[type="text"], form input[type="email"], form input[type="tel"],
+  form select, form textarea {
+    background-color: #1c2a12;
+    border-color: #7fae4a;
+  }
+  form input:not(:placeholder-shown):valid,
+  form textarea:not(:placeholder-shown):valid { border-color: #6fdc8c; }
+  form input:not(:placeholder-shown):invalid,
+  form textarea:not(:placeholder-shown):invalid { border-color: #ff8a95; }
+  form fieldset { border-color: var(--color-border-hover); }
+  form legend { color: #132a13; }  /* fundo da legenda continua verde-claro */
+
+  /* Alertas */
+  .alert-info, .alert-sucesso, .alert-erro { background-color: #1c2a12; }
+  .alert-erro { color: #ff8a95; }
+  .alert-sucesso { color: #6fdc8c; }
+
+  /* Badges: texto escuro sobre laranja e verde-claro */
+  .badge-andamento, .badge-futuro { color: #1b1b1b; }
+
+  /* Botão "Saiba mais" e modal */
+  .btn-saiba-mais { background-color: #2d4d12; }
+  .modal-conteudo { border: 1px solid var(--color-border-hover); }
+}
